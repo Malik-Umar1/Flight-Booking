@@ -1,11 +1,16 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { formatTime } from "@/utils/TimeFormatter";
-import flightLogo from "@/app/Images/flightLogo.jpg";
-import Image from "next/image";
 import FlightImage from "./FlightImage";
+import { TFlight } from "@/data/types/types";
 
-const FlightCard = ({ data, handleSideSlider, key }: any) => {
+type FlightCardProps = {
+    data : TFlight;
+    handleSideSlider : (id:string)=>void
+
+}
+
+const FlightCard = ({ data, handleSideSlider }: any) => {
   console.log("data", data);
 
   return (

@@ -11,7 +11,7 @@ import SearchButton from "../components/SearchButton";
 import { Button } from "@/components/ui/button";
 import SkeletonLayout from "../components/SkeletonLayout";
 import EditSearch from "../components/EditSearch";
-import flightsData from "@/data/flightsData.json"
+
 
 
 export default function Results({fromAirport,toAirport,departureDate,returnDate}:any) {
@@ -74,8 +74,8 @@ return(
                <Dropdown placeholder="Where to?"/>
             </div>
 
-            <DatePickerDemo text="Departure"/>
-            <DatePickerDemo text="Return"/>
+            <DatePickerDemo placeholder="Departure"/>
+            <DatePickerDemo placeholder="Return"/>
           </div>
           <div className=" flex justify-end gap-5">
           <SearchButton />
@@ -160,7 +160,7 @@ return(
       
       {isLoading && (
         <div className="absolute inset-0 z-10">
-          <LoadingOverlay />
+          <LoadingOverlay loadingStep={0} />
         </div>
       )}
     {isLoading ? (

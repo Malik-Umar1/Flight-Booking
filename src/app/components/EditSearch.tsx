@@ -5,7 +5,17 @@ import airports from "@/data/airports.json"
 import { DateFormat } from '@/utils/DateFormat'
 import LoadingBar from './LoadingBar'
 
-const EditSearch = ({ handleSearchClick, handleBackClick,fromAirport, toAirport,departureDate,returnDate ,isLoading }:any) => {
+type EditSearchProps = {
+  handleSearchClick: () => void;
+  handleBackClick: () => void;
+  fromAirport: string;
+  toAirport: string;
+  departureDate: string;
+  returnDate: string;
+  isLoading?: boolean;
+}
+
+const EditSearch = ({ handleSearchClick, handleBackClick,fromAirport, toAirport,departureDate,returnDate ,isLoading }:EditSearchProps) => {
   console.log("this is from airport", fromAirport)
   const fromAirportName = airports.find(airport => airport.code === fromAirport);
   const toAirportName = airports.find(airport =>airport.code === toAirport )

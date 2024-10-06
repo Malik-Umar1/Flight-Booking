@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import React from "react";
 
 
-const SearchButton = ({handleSearch,isDisabled}:{isDisabled:boolean,handleSearch:()=>void}) => {
+const SearchButton = ({handleSearch,isDisabled}:{isDisabled?:boolean,handleSearch?:()=>void}) => {
 
 
   return (

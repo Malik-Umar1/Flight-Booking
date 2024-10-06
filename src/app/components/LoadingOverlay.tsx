@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import GifComponent from "./GifComponent";
 
 type OverLayProps = {
-  loadingStep : number
+  loadingStep: number
 }
 
 export function LoadingOverlay({loadingStep}:OverLayProps) {

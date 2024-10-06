@@ -137,7 +137,6 @@ export default function Results({
       <div className="relative z-20">
              <EditSearch
             handleBackClick={handleBackClick}
-            data = {filteredFlights}
             isLoading={isLoading}
             handleSearchClick={handleSearchClick}
             fromAirport={fromAirport}

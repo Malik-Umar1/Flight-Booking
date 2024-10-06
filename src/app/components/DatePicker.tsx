@@ -13,8 +13,8 @@ import {
 } from "@/components/ui/popover"
 
 type DateProps ={
-  onChange: (val?:string)=>void;
-  placeholder: string;
+  onChange?: (val?:string)=>void;
+  placeholder?: string;
 }
 
 export function DatePickerDemo({placeholder,onChange} :DateProps) {
