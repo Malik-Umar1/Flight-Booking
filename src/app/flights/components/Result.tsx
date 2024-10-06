@@ -11,12 +11,18 @@ import SearchFlights from "@/app/components/SearchFlights";
 import { TFlight } from "@/data/types/types";
 import SideBar from "@/app/components/SideBar";
 
+type ResultsProps = {
+  fromAirport : string;
+  toAirport: string;
+  departureDate : string;
+  returnDate : string;
+}
 export default function Results({
   fromAirport,
   toAirport,
   departureDate,
   returnDate,
-}: any) {
+}: ResultsProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [isSliderOpen, setIsSliderOpen] = useState(false);
   const [isSideSliderOpen, setIsSideSliderOpen] = useState(false);
