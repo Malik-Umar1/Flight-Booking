@@ -22,7 +22,7 @@ name: string;
   };
   
   type TPriceData = {
-    amount: number;
+    amount: string;
     currency: string;
   };
   

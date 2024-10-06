@@ -61,7 +61,7 @@ export default function Results({
   const handleSearchFlights = async () =>{   
     try{
         setIsLoading(true)
-        const flights  =  await getFlights
+        const flights  =  await getFlights 
         const filtered = flights.filter((flight)=>
           flight.departure.code === searchQuery.from &&
           flight.arrival.code === searchQuery.to
