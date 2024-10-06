@@ -19,7 +19,7 @@ type ResultsProps = {
   returnDate: string;
 }
 
-export default function Results({fromAirport,toAirport,departureDate,returnDate}:any) {
+export default function Results({fromAirport,toAirport,departureDate,returnDate}:ResultsProps) {
 const [isLoading,setIsLoading] = useState(true);
 const [isSliderOpen, setIsSliderOpen] = useState(false);
 const [isSideSliderOpen, setIsSideSliderOpen] = useState(false);
