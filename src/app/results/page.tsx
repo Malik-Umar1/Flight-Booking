@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { LoadingOverlay } from "../components/LoadingOverlay";
 import { useRouter } from "next/navigation";
-import { ArrowLeft, ArrowLeftRight, Clock4, Search, X } from "lucide-react";
+import { ArrowLeft, ArrowLeftRight, Clock4,} from "lucide-react";
 import FlightCard from "../components/FlightCard";
 import { Dropdown } from "../components/DropDown";
 import { DatePickerDemo } from "../components/DatePicker";
@@ -12,7 +12,12 @@ import { Button } from "@/components/ui/button";
 import SkeletonLayout from "../components/SkeletonLayout";
 import EditSearch from "../components/EditSearch";
 
-
+type ResultsProps = {
+  fromAirport : ()=>void;
+  toAirport : ()=>void;
+  departureDate: string;
+  returnDate: string;
+}
 
 export default function Results({fromAirport,toAirport,departureDate,returnDate}:any) {
 const [isLoading,setIsLoading] = useState(true);
