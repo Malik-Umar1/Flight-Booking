@@ -14,10 +14,10 @@ layover : string;
 name: string;
   }
   type TArrivalDepartureData = {
-    airport: string;
-    code: string;
-    city: string;
-    country: string;
+    airport: string | undefined;
+    code: string | undefined;
+    city: string | undefined;
+    country: string | undefined;
     time: string;
   };
   

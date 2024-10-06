@@ -27,7 +27,7 @@ export default function Results({
   const [isSliderOpen, setIsSliderOpen] = useState(false);
   const [isSideSliderOpen, setIsSideSliderOpen] = useState(false);
   const [filteredFlights,setFilteredFlights] = useState<TFlight[]>([])
-  const [selectedFlight,setSelectedFlight] = useState<TFlight>()
+  const [selectedFlight,setSelectedFlight] = useState<TFlight | undefined>()
   const [loadingStep, setLoadingStep] = useState(0);
   const [searchQuery, setSearchQuery] = useState({
     from: fromAirport,

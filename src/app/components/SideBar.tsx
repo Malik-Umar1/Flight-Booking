@@ -6,7 +6,7 @@ import React from "react";
 type SideBarProps ={
   isSideSliderOpen : boolean
   handleSideSlider : ()=>void;
-  flight : TFlight;
+  flight : TFlight | undefined;
 }
 
 const SideBar = ({ isSideSliderOpen, handleSideSlider, flight }:SideBarProps) => {
@@ -32,7 +32,7 @@ const SideBar = ({ isSideSliderOpen, handleSideSlider, flight }:SideBarProps) =>
         <div className="flex mt-5 items-center gap-2">
           <div className="border ml-1 border-2 border-black rounded-full h-[14px] w-[14px]"></div>
           <span className="text-[12px]">
-            {formatTime(flight?.departure.time)}
+            {formatTime(flight?.departure.time || "No data")}
           </span>
         </div>
         <div className="h-[120px] flex p-2 gap-3">
@@ -57,12 +57,12 @@ const SideBar = ({ isSideSliderOpen, handleSideSlider, flight }:SideBarProps) =>
           </div>
         </div>
 
-        {flight?.stops.length > 0 ? (
+        {flight && flight.stops && flight?.stops?.length > 0 ? (
           <>
             <div className="flex ml-1 items-center gap-2">
               <div className="border border-2 border-black rounded-full h-[14px] w-[14px]"></div>
               <span className="text-[12px]">
-                Sat 28 Sept • {formatTime(flight?.departure.time)}
+                Sat 28 Sept • {formatTime(flight?.departure.time || "No data")}
               </span>
             </div>
 
@@ -93,7 +93,7 @@ const SideBar = ({ isSideSliderOpen, handleSideSlider, flight }:SideBarProps) =>
             <div className="flex ml-1 items-center gap-2">
               <div className="border border-2 border-black rounded-full h-[14px] w-[14px]"></div>
               <span className="text-[12px]">
-                Sat 28 Sept • {formatTime(flight?.departure.time)}
+                Sat 28 Sept • {formatTime(flight?.departure.time || "No data")}
               </span>
             </div>
             <div className="h-[120px] flex p-2 gap-3">
@@ -131,7 +131,7 @@ const SideBar = ({ isSideSliderOpen, handleSideSlider, flight }:SideBarProps) =>
           <div className="border border-2 border-black rounded-full h-[14px] w-[14px]"></div>
           <span className="text-[12px]">
             {" "}
-            {formatTime(flight?.arrival.time)}
+            {formatTime(flight?.arrival.time || "No data")}
           </span>
         </div>
         <div className="w-full">
