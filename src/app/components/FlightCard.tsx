@@ -5,12 +5,12 @@ import FlightImage from "./FlightImage";
 import { TFlight } from "@/data/types/types";
 
 type FlightCardProps = {
-    data : TFlight;
-    handleSideSlider : (id:string)=>void
+    data: TFlight;
+    handleSideSlider: (id:string)=>void
 
 }
 
-const FlightCard = ({ data, handleSideSlider }: any) => {
+const FlightCard = ({ data, handleSideSlider }: FlightCardProps) => {
   console.log("data", data);
 
   return (
